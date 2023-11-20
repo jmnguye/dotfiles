@@ -6,4 +6,4 @@ pkill swww
 
 swww init
 
-swww img ~/Wallpaper/${W}
+swww img ~/Wallpapers/${W}
