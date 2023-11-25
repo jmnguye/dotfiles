@@ -6,10 +6,14 @@
     "spacing": 4, // Gaps between modules (4px)
     // Choose the order of the modules
     "modules-left": ["hyprland/workspaces", "hyprland/submap", "custom/media"],
-    "modules-center": ["hyprland/window"],
+    "modules-center": ["custom/fullscreen","hyprland/window"],
     //"modules-right": ["pulseaudio", "network", "cpu", "memory", "temperature", "backlight", "battery", "clock", "tray"],
     "modules-right": ["pulseaudio", "network", "group/hardware", "temperature", "backlight", "clock", "bluetooth", "custom/wlogout", "tray"],
     // Modules configuration
+    "custom/fullscreen": {
+    "exec": "~/dotfiles/waybar/display_fullscreen_status.sh",
+    "interval": 1,
+    },
     "bluetooth": {
 	"format": " {status}",
 	"format-connected": " {device_alias}",
