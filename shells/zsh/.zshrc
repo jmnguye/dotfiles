@@ -2,11 +2,12 @@
 export ZSH="/home/mxp/.oh-my-zsh"
 
 plugins=(git
-zsh-autosuggestions
-zsh-syntax-highlighting
+colorize
   )
 
 source $ZSH/oh-my-zsh.sh
 
 EDITOR='vim'
+eval "$(starship init zsh)"
 
+alias ls="eza --icons"
