@@ -11,3 +11,4 @@ EDITOR='vim'
 eval "$(starship init zsh)"
 
 alias ls="eza --icons"
+alias ssh="kitten ssh"
