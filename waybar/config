@@ -18,14 +18,14 @@
                   // Choose the order of the modules
   //"modules-left": ["hyprland/workspaces", "hyprland/submap", "custom/media"],
     "modules-left": ["hyprland/workspaces"],
-  //"modules-center": ["custom/fullscreen","hyprland/window"],
-    "modules-center": ["hyprland/window"],
+    "modules-center": ["custom/fullscreen", "hyprland/window"],
+  //"modules-center": ["hyprland/window"],
     "modules-right": ["pulseaudio", "network", "group/hardware", "temperature", "backlight", "clock", "bluetooth", "custom/wlogout", "tray"],
 
     // Modules configuration
     "custom/fullscreen": {
-      "exec": "~/dotfiles/waybar/display_fullscreen_status_v2.sh",
-      "interval": 1,
+      "exec": "/home/mxp/dotfiles/waybar/hyprland_client.sh",
+      "format": "{}"
     },
     "bluetooth": {
       "format": " {status}",
