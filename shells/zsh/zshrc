@@ -1,0 +1,24 @@
+# Created by newuser for 5.9
+export ZSH="/home/mxp/.oh-my-zsh"
+
+plugins=(git
+colorize
+  )
+
+source $ZSH/oh-my-zsh.sh
+
+EDITOR='vim'
+eval "$(starship init zsh)"
+
+alias ls="eza --icons"
+alias ll="eza -ll --icons"
+alias la="eza -la --icons"
+alias ssh="kitten ssh"
+alias editHyprlandConfig="nvim ~/dotfiles/hypr/hyprland.conf"
+alias editWaybarConfig="nvim ~/dotfiles/waybar/config"
+alias goHyprlandConfig="cd ~/dotfiles/hypr"
+alias goWaybarConfig="cd ~/dotfiles/waybar"
+
+if [ -z "$TMUX" ]; then
+  tmux attach -t default || tmux new -s default
+fi
