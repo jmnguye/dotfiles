@@ -72,7 +72,7 @@
         "urgent": " ",
         "focused": " ",
         "default": " ",
-        "active": " 󰮯 "
+        //"active": " 󰮯 "
       }
     },
     "hyprland/window": {
