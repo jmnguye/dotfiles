@@ -38,6 +38,11 @@ window#waybar {
   border-top: 2px solid #c9545d;
 }
 
+#workspaces button.visible {
+  color: black;
+  background-color: white;
+}
+
 #workspaces button.active {
   color: black;
   background-color: white;
