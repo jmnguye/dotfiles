@@ -16,10 +16,8 @@
                   // "width": 1280, // Waybar width
     "spacing": 4, // Gaps between modules (4px)
                   // Choose the order of the modules
-  //"modules-left": ["hyprland/workspaces", "hyprland/submap", "custom/media"],
     "modules-left": ["hyprland/workspaces"],
     "modules-center": ["custom/fullscreen", "hyprland/window"],
-  //"modules-center": ["hyprland/window"],
     "modules-right": ["pulseaudio", "network", "group/hardware", "temperature", "backlight", "clock", "bluetooth", "custom/wlogout", "tray"],
 
     // Modules configuration
@@ -57,22 +55,26 @@
       "all-outputs": false,
       "warp-on-scroll": false,
       "on-click": "activate",
-      "format": "{name}: {icon}",
+      "format": "{id}:{windows}",
+      "window-rewrite-default": " ",
+      "window-rewrite": {
+        "class<libreWolf>": " ",
+        "class<firefox>": " ",
+        "class<kitty>": " ",
+        "class<thunderbird>": " ",
+        "class<spotify>": " ",
+        "class<org.kde.dolphin>": " ",
+        "class<org.keepassxc.KeePassXC>": "󰩪 ",
+        "title<.*youtube.*>": " ",
+        "class<steam>": " ",
+        "class<discord>": " ",
+        "class<.*libreoffice-.*>": "󰏆",
+      },
       "format-icons": {
-        "1": " ",
-        "2": " ",
-        "3": " ",
-        "4": " ",
-        "5": " ",
-        "6": " ",
-        "7": " ",
-        "8": " ",
-        "9": " ",
-        "10": " ",
         "urgent": " ",
         "focused": " ",
         "default": " ",
-        //"active": " 󰮯 "
+        "active": " 󰮯 "
       }
     },
     "hyprland/window": {
