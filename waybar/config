@@ -55,7 +55,7 @@
       "all-outputs": false,
       "warp-on-scroll": false,
       "on-click": "activate",
-      "format": "{id}:{windows}",
+      "format": "{id}:{windows}  ",
       "window-rewrite-default": " ",
       "window-rewrite": {
         "class<libreWolf>": " ",
