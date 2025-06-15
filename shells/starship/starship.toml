@@ -8,7 +8,7 @@ format = """
 [░▒▓](#a3aed2)\
 [  ](bg:#a3aed2 fg:#090c0c)\
 $username\
-[@](bg:#a3aed2 fg:#394260)\
+[@](bg:#a3aed2 fg:white)\
 $hostname\
 [](bg:#769ff0 fg:#a3aed2)\
 $directory\
