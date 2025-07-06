@@ -19,9 +19,9 @@ alias editWaybarConfig="nvim ~/dotfiles/waybar/config"
 alias goHyprlandConfig="cd ~/dotfiles/hypr"
 alias goWaybarConfig="cd ~/dotfiles/waybar"
 
-if [ -z "$TMUX" ]; then
-  tmux attach -t default || tmux new -s default
-fi
+# if [ -z "$TMUX" ]; then
+#   tmux attach -t default || tmux new -s default
+# fi
 
 export PATH="$HOME/.pyenv/bin:$PATH"
 eval "$(pyenv init -)"
