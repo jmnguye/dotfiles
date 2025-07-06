@@ -60,7 +60,7 @@
       "window-rewrite": {
         "class<libreWolf>": " ",
         "class<firefox>": " ",
-        "class<kitty>": " ",
+        "class<xfce4-terminal>": " ",
         "class<thunderbird>": " ",
         "class<spotify>": " ",
         "class<org.kde.dolphin>": " ",
