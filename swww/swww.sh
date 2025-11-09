@@ -9,4 +9,4 @@ then
   swww-daemon
 fi
 
-for screen in $(swww query | awk -F ":" '{print $1}'); do swww img -o "$screen" ~/Images/wallpapers/${img} --transition-type wipe --transition-angle 30 --transition-step 90; done
+for screen in $(swww query | awk -F ":" '{print $2}'); do swww img -o "$screen" ~/Images/wallpapers/${img} --transition-type wipe --transition-angle 30 --transition-step 90; done
