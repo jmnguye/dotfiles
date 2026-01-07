@@ -9,6 +9,8 @@
 //                                                     //
 /////////////////////////////////////////////////////////
 
+// icons are retrieved from https://www.nerdfonts.com/cheat-sheet
+
 {
     "layer": "top", // Waybar at top layer
     "position": "top", // Waybar position (top|bottom|left|right)
@@ -61,14 +63,14 @@
         "class<libreWolf>": " ",
         "class<firefox>": " ",
         "class<xfce4-terminal>": " ",
-        "class<thunderbird>": " ",
+        "class<org.mozilla.Thunderbird>": " ",
         "class<spotify>": " ",
         "class<org.kde.dolphin>": " ",
-        "class<org.keepassxc.KeePassXC>": "󰩪 ",
         "title<.*youtube.*>": " ",
         "class<steam>": " ",
         "class<discord>": " ",
         "class<.*libreoffice-.*>": "󰏆",
+        "class<*vscode*>": "  "
       },
       "format-icons": {
         "urgent": " ",
@@ -80,11 +82,7 @@
     "hyprland/window": {
       "max-length": 200,
       "separate-outputs": true
-    },
-    "hyprland/submap": {
-      "format": "<span style=\"italic\">{}</span>",
-      "max-length": 8,
-      "tooltip": false
+    }, "hyprland/submap": { "format": "<span style=\"italic\">{}</span>", "max-length": 8, "tooltip": false
     },
     "tray": {
       "icon-size": 21,
