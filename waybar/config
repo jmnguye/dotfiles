@@ -70,7 +70,7 @@
         "class<steam>": " ",
         "class<discord>": " ",
         "class<.*libreoffice-.*>": "󰏆",
-        "class<code>": "  "
+        "class<code*>": "  "
       },
       "format-icons": {
         "urgent": " ",
