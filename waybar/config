@@ -18,9 +18,9 @@
                   // "width": 1280, // Waybar width
     "spacing": 4, // Gaps between modules (4px)
                   // Choose the order of the modules
-    "modules-left": ["hyprland/workspaces"],
+    "modules-left": ["custom/appmenu", "hyprland/workspaces"],
     "modules-center": ["custom/fullscreen", "hyprland/window"],
-    "modules-right": ["pulseaudio", "network", "group/hardware", "temperature", "backlight", "clock", "bluetooth", "custom/wlogout", "tray"],
+    "modules-right": ["network", "backlight", "bluetooth", "pulseaudio", "group/hardware", "clock", "custom/wlogout", "tray"],
 
     // Modules configuration
     "custom/fullscreen": {
@@ -46,8 +46,6 @@
     "group/hardware": {
       "orientation": "horizontal",
       "modules": [
-      "cpu",
-      "memory",
       "battery"
       ]
     },
@@ -63,9 +61,11 @@
         "class<libreWolf>": " ",
         "class<firefox>": " ",
         "class<xfce4-terminal>": " ",
+        "class<kitty>": " ",
         "class<org.mozilla.Thunderbird>": " ",
         "class<spotify>": " ",
         "class<org.kde.dolphin>": " ",
+        "class<thunar>": " ",
         "title<.*youtube.*>": " ",
         "class<steam>": " ",
         "class<discord>": " ",
@@ -137,7 +137,7 @@
     },
     "pulseaudio": {
    // "scroll-step": 1, // %, can be a float
-      "format": "{volume}%{icon} {format_source}",
+      "format": "{volume}%{icon}",
       "format-bluetooth": "{volume}% {icon} {format_source}",
       "format-bluetooth-muted": " {icon} {format_source}",
       "format-muted": " {format_source}",
@@ -163,5 +163,18 @@
         "default": "🎜 "
       },
       "escape": true,
-    }
+    },
+    "custom/appmenu": {
+      "format": "󰣇",
+      "rotate": 0,
+      "on-click": "~/.config/rofi/launchers/type-5/launcher.sh"
+    },
+    "wlr/taskbar": {
+        	"format": "{icon}",
+        	"tooltip": true,
+        	"tooltip-format": "{title}",
+        	"on-click": "activate",
+        	"on-click-middle": "close",
+        	"active-first": true
+   	 },
 }
