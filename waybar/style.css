@@ -1,85 +1,108 @@
+  /* color: #fdcae1; */
+	/* color: #84b6f4; */
+  /* color: #77dd77; */
+  /* color: #ff6961; */
+  /* color: #77dd77; */
+  /* color: #b0f2c2; */
+  /* color: #ffda9e; */
+  /* color: #5294e2; */
+  /* color: #bd1a1a; */
+  /* color: #1793D1 */
+  /* color: #0771A6 */
+  /* color: #333333 */
+  /* color: #33AADD */
+  /* color: #1A1B26 */
+  /* color: #24283b  */
+  /* color: #C0CAF5 */
+  /* color: #F7768E */
+  /* color: #e25252 */
+
+@define-color foreground #5294e2;
+@define-color red #e25252;
+@define-color background rgba(40, 40, 40, 0.7);
+@define-color text white;
+
 * {
-  border: none;
   border-radius: 5px;
-  /* font-family: "Hack Nerd Font"; */
   font-family: "Symbols Nerd Font Mono";
-  font-size: 13px;
-  min-height: 0;
-  font-weight: bold;
+  font-size: 15px;
+  padding: 0 2px;
 }
 
 window#waybar {
-  background: rgba(40, 40, 40, 0.7);
+  /* background: rgba(40, 40, 40, 0.7); */
+  background: transparent;
   color: rgba(255,255,255, 0.9);
-  background-color: rgba(40, 40, 40, 0.8);
-  padding: 0 10px;
+  /* background-color: rgba(40, 40, 40, 0.8); */
+  background-color: transparent;
   margin: 5px;
 }
 
+#custom-appmenu {
+  color: @foreground;;
+}
+
+.modules-left {
+  background: @background;
+  color: @text;
+}
+
+.modules-right {
+  background: @background;
+  color: @text;
+}
+
+#workspaces {
+  background: @background;
+}
+
 #workspaces button {
-  margin: 0 3px;
-  padding: 0 3px;
-  background: transparent;
-  color: white;
-  border-top: 2px solid transparent;
-  border-bottom: 1px solid;
+  color: @foreground;
 }
 
 #workspaces button.active {
   color: black;
-  background-color: white;
-}
-
-#workspaces button:not(.empty):not(.active) {
-  color: #fdcae1;
+  background-color: rgba(255,255,255, 0.2);
 }
 
 #bluetooth {
-  color: #0082FC;
+  color: @text;
 }
 
 #backlight {
-  color: #ffda9e;
-}
-
-#window {
-  color: #b0f2c2;
-}
-
-#custom-appmenu {
-  color: #5294e2;
+  color: @text;
 }
 
 #custom-wlogout {
-  color: #ff6961;
-}
-
-#clock {
-  color: #fdfd96;
+  color: @red;
 }
 
 #battery {
-  color: #77dd77;
+  color: @text;
 }
 
 #network {
-	color: #84b6f4;
+  color: @text;
 }
 
 #pulseaudio {
-  color: #fdcae1;
+  color: @text;
 }
 
 #clock {
-  font-weight: bold;
+  color: @text;
 }
 
 #battery icon {
-  color: red;
+  color: @red;
 }
 
 #battery.charging {
   color: #77dd77;
+}
+
+#network.disconnected {
+  background: @red;
 }
 
 @keyframes blink {
@@ -90,15 +113,11 @@ window#waybar {
 }
 
 #battery.warning:not(.charging) {
-  color: red;
+  color: @red;
   animation-name: blink;
   animation-duration: 0.5s;
   animation-timing-function: linear;
   animation-iteration-count: infinite;
   animation-direction: alternate;
-}
-
-#network.disconnected {
-  background: #f53c3c;
 }
 
