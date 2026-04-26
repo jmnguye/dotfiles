@@ -60,9 +60,14 @@ window#waybar {
   color: @foreground;
 }
 
-#workspaces button.active {
-  color: black;
+#workspaces button.active.persistent {
   background-color: rgba(255,255,255, 0.2);
+}
+
+#workspaces button.persistent {
+  margin: 0 1px;
+  padding: 0 8px;
+  background-color: rgba(255,255,255, 0.1);
 }
 
 #bluetooth {
