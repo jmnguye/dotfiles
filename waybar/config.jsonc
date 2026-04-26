@@ -43,7 +43,7 @@
       "warp-on-scroll": false,
       "on-click": "activate",
       "all-outputs": true,
-      "format": "{icon} {windows}",
+      "format": "{windows}",
       "workspace-taskbar": {
         "icon-size": 15,
         "enable": true,
