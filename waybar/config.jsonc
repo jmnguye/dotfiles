@@ -1,0 +1,130 @@
+/////////////////////////////////////////////////////////
+//                                                     //
+// ██╗    ██╗ █████╗ ██╗   ██╗██████╗  █████╗ ██████╗  //
+// ██║    ██║██╔══██╗╚██╗ ██╔╝██╔══██╗██╔══██╗██╔══██╗ //
+// ██║ █╗ ██║███████║ ╚████╔╝ ██████╔╝███████║██████╔╝ //
+// ██║███╗██║██╔══██║  ╚██╔╝  ██╔══██╗██╔══██║██╔══██╗ //
+// ╚███╔███╔╝██║  ██║   ██║   ██████╔╝██║  ██║██║  ██║ //
+//  ╚══╝╚══╝ ╚═╝  ╚═╝   ╚═╝   ╚═════╝ ╚═╝  ╚═╝╚═╝  ╚═╝ //
+//                                                     //
+/////////////////////////////////////////////////////////
+
+// icons are retrieved from https://www.nerdfonts.com/cheat-sheet
+
+{
+    "layer": "top", // Waybar at top layer
+    "position": "top", // Waybar position (top|bottom|left|right)
+    "height": 30, // Waybar height (to be removed for auto height)
+    "modules-left": ["custom/appmenu", "custom/fullscreen", "hyprland/window"],
+    "modules-center": ["hyprland/workspaces"],
+    "modules-right": ["network", "backlight", "bluetooth", "pulseaudio", "battery", "clock", "custom/wlogout", "tray"],
+    // Modules configuration
+    "custom/fullscreen": {
+      "exec": "/home/mxp/dotfiles/waybar/hyprland_client.sh",
+      "format": "{}"
+    },
+    "bluetooth": {
+      "format": "<span size='12pt' color ='#e25252'></span> {status}",
+      "format-connected": "<span size='12pt' color ='#e25252'></span> {device_alias}",
+      "format-connected-battery": "<span size='12pt' color ='#e25252'></span> {device_alias} {device_battery_percentage}%",
+      "tooltip-format": "{controller_alias}\t{controller_address}\n\n{num_connections} connected",
+      "tooltip-format-connected": "{controller_alias}\t{controller_address}\n\n{num_connections} connected\n\n{device_enumerate}",
+      "tooltip-format-enumerate-connected": "{device_alias}\t{device_address}",
+      "tooltip-format-enumerate-connected-battery": "{device_alias}\t{device_address}\t{device_battery_percentage}%",
+      "on-click": "blueman-manager"
+    },
+    "custom/wlogout": {
+      "format": "",
+      "interval": "once",
+      "on-click": "wlogout -c 5 -r 5 -p layer-shell"
+    },
+    "hyprland/workspaces": {
+      "disable-scroll": true,
+      "warp-on-scroll": false,
+      "on-click": "activate",
+      "all-outputs": true,
+      "format": "{icon} {windows}",
+      "workspace-taskbar": {
+        "icon-size": 15,
+        "enable": true,
+        "format": "{icon}"
+      },
+      "format-icons": {
+        "urgent": "",
+        "active": "",
+        "default": "",
+        "special": "󰮯"
+      }
+    },
+    "hyprland/window": {
+      "format": "{title}",
+      "icon": true,
+      "icon-size": 17,
+      "max-length": 20,
+      "separate-outputs": true
+    }, 
+    "tray": {
+      "icon-size": 21,
+      "spacing": 10
+    },
+    "clock": {
+      "format": "<span size='12pt' color='#e25252'></span> {:%H:%M %a, %d}",
+      "tooltip-format": "<big>{:%Y %B}</big>\n<tt><small>{calendar}</small></tt>",
+      "format-alt": "{:%Y-%m-%d}"
+    },
+    "cpu": {
+      "format": "{usage}%",
+      "tooltip": false
+    },
+    "memory": {
+      "format": "{}%"
+    },
+    "backlight": {
+      "device": "acpi_video1",
+      "format": "<span size='12pt' color='#e25252'>{icon}</span> {percent}%",
+      "format-icons": ["", "", "", "", "", "", "", "", ""]
+    },
+    "battery": {
+      "states": {
+        "good": 95,
+        "warning": 20,
+        "critical": 15
+      },
+      "format": "<span size='12pt' color='#e25252'>{icon}</span> {capacity}%",
+      "format-charging": "{capacity}%",
+      "format-plugged": "{capacity}%",
+      "format-alt": "{icon} {time}",
+      "format-icons": ["", "", "", "", ""]
+    },
+    "network": {
+      "format-wifi": "<span size='12pt'color='#e25252'></span> {essid} {signalStrength}%",
+      "format-ethernet": "<span size='12pt'color='#e25252'>NET</span> {ipaddr}/{cidr}",
+      "tooltip-format": "<span size='12pt'color='#e25252'>NET</span> {ifname} via {gwaddr}",
+      "format-linked": "<span size='12pt'color='#e25252'>NET</span> {ifname} (No IP)",
+      "format-disconnected": "<span size='12pt'color='#e25252'>󰤮</span> Disconnected",
+      "format-alt": "{ifname}: {ipaddr}/{cidr}"
+    },
+    "pulseaudio": {
+      "format": "<span size='12pt' color='#e25252'>{icon}</span> {volume}%",
+      "format-bluetooth": "<span size='12pt' color='#e25252'>{icon}</span> {volume}% {format_source}",
+      "format-bluetooth-muted": "<span size='12pt' color='#e25252'> {icon}</span> {format_source}",
+      "format-muted": "<span size='12pt' color='#e25252'> </span> {format_source}",
+      "format-source": "<span size='12pt' color='#e25252'></span> {volume}%",
+      "format-source-muted": "",
+      "format-icons": {
+        "headphone": "",
+        "hands-free": "",
+        "headset": "",
+        "phone": "",
+        "portable": "",
+        "car": "",
+        "default": ["", "", ""]
+      },
+      "on-click": "pavucontrol"
+    },
+    "custom/appmenu": {
+      "format": "󰣇",
+      "rotate": 0,
+      "on-click": "~/.config/rofi/launchers/type-5/launcher.sh"
+    },
+}
