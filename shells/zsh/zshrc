@@ -15,7 +15,7 @@ alias ll="eza -ll --icons"
 alias la="eza -la --icons"
 #alias ssh="kitten ssh"
 alias editHyprlandConfig="nvim ~/dotfiles/hypr/hyprland.conf"
-alias editWaybarConfig="nvim ~/dotfiles/waybar/config"
+alias editWaybarConfig="nvim ~/dotfiles/waybar/config.jsonc"
 alias goHyprlandConfig="cd ~/dotfiles/hypr"
 alias goWaybarConfig="cd ~/dotfiles/waybar"
 
